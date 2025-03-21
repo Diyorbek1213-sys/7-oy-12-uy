@@ -7,7 +7,9 @@ const AdderForm = () => {
 
     const handleAdd = (event) => {
         event.preventDefault()
-
+        if (inpValue.length < 4) {
+            return alert('Task yozuvi 4 tadan kam!')
+        }
         add(inpValue)
         setInpValue('')
     }
